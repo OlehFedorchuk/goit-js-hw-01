@@ -1,9 +1,10 @@
 // Ширина елемента
 function getElementWidth(content, padding, border) {
-  return `${
-    Number.parseInt(content) +
-    (Number.parseInt(padding) * 2 + Number.parseFloat(border) * 2)
-  }`;
+  const c = Number.parseFloat(content);
+  const p = Number.parseFloat(padding);
+  const b = Number.parseFloat(border);
+
+  return c + p * 2 + b * 2;
 }
 
 console.log(getElementWidth('50px', '8px', '4px')); // 74
